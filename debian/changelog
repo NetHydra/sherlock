@@ -1,3 +1,9 @@
+sherlock (0.15.1-hydrapwk1) UNRELEASED; urgency=medium
+
+  * Fix Target.
+
+ -- Joe <joe@rstrike.my.id>  Tue, 08 Jul 2025 06:00:00 +0700
+
 sherlock (0.15.0-hydrapwk1) UNRELEASED; urgency=medium
 
   * Change Target DIR into /usr/local/Library/* make sure /usr/share/* still clean.

@@ -1,4 +1,4 @@
-debian/helper-script/sherlock usr/share/bin/
+debian/helper-script/sherlock usr/bin/
 debian/sherlock-project/resources usr/share/
 debian/sherlock-project/__init__.py usr/share/sherlock/
 debian/sherlock-project/__main__.py usr/share/sherlock/
