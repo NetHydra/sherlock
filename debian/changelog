@@ -1,3 +1,10 @@
+sherlock (0.15.1-hydrapwk4) RELEASED; urgency=medium
+
+  * Update copyright, License, Upstream metadata
+  * Adding docs
+
+ -- Joe <joe@rstrike.my.id>  Tue, 22 Jul 2025 21:13:00 +0700
+
 sherlock (0.15.1-hydrapwk3) RELEASED; urgency=medium
 
   * New patch, patch 1 fail
