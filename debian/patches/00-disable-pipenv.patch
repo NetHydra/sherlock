@@ -1,0 +1,67 @@
+diff -ruN ../../sherlock_project/__main__.py ../sherlock-project/__main__.py
+--- ../../sherlock_project/__main__.py	2025-07-22 08:33:32.905901735 -0400
++++ ../sherlock-project/__main__.py	2025-07-22 08:33:32.901901784 -0400
+@@ -18,5 +18,5 @@
+         print(f"Sherlock requires Python 3.9+\nYou are using Python {python_version}, which is not supported by Sherlock.")
+         sys.exit(1)
+ 
+-    from sherlock_project import sherlock
++    import sherlock
+     sherlock.main()
+diff -ruN ../../sherlock_project/notify.py ../sherlock-project/notify.py
+--- ../../sherlock_project/notify.py	2025-07-22 08:33:32.905901735 -0400
++++ ../sherlock-project/notify.py	2025-07-22 08:33:32.901901784 -0400
+@@ -3,7 +3,7 @@
+ This module defines the objects for notifying the caller about the
+ results of queries.
+ """
+-from sherlock_project.result import QueryStatus
++from result import QueryStatus
+ from colorama import Fore, Style
+ import webbrowser
+ 
+diff -ruN ../../sherlock_project/sherlock.py ../sherlock-project/sherlock.py
+--- ../../sherlock_project/sherlock.py	2025-07-22 08:33:32.909901685 -0400
++++ ../sherlock-project/sherlock.py	2025-07-22 08:33:32.901901784 -0400
+@@ -6,16 +6,7 @@
+ This module contains the main logic to search for usernames at social
+ networks.
+ """
+-
+ import sys
+-
+-try:
+-    from sherlock_project.__init__ import import_error_test_var # noqa: F401
+-except ImportError:
+-    print("Did you run Sherlock with `python3 sherlock/sherlock.py ...`?")
+-    print("This is an outdated method. Please see https://sherlockproject.xyz/installation for up to date instructions.")
+-    sys.exit(1)
+-
+ import csv
+ import signal
+ import pandas as pd
+@@ -29,18 +20,18 @@
+ import requests
+ from requests_futures.sessions import FuturesSession
+ 
+-from sherlock_project.__init__ import (
++from __init__ import (
+     __longname__,
+     __shortname__,
+     __version__,
+     forge_api_latest_release,
+ )
+ 
+-from sherlock_project.result import QueryStatus
+-from sherlock_project.result import QueryResult
+-from sherlock_project.notify import QueryNotify
+-from sherlock_project.notify import QueryNotifyPrint
+-from sherlock_project.sites import SitesInformation
++from result import QueryStatus
++from result import QueryResult
++from notify import QueryNotify
++from notify import QueryNotifyPrint
++from sites import SitesInformation
+ from colorama import init
+ from argparse import ArgumentTypeError
+ 

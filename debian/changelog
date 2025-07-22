@@ -1,3 +1,9 @@
+sherlock (0.15.1-hydrapwk2) RELEASED; urgency=medium
+
+  * Trying to use patch instead new src.
+
+ -- Joe <joe@rstrike.my.id>  Tue, 22 Jul 2025 19:36:00 +0700
+
 sherlock (0.15.1-hydrapwk1) UNRELEASED; urgency=medium
 
   * Fix Target.
