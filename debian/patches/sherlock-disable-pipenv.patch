@@ -1,16 +1,22 @@
-diff -ruN ../../sherlock_project/__main__.py ../sherlock-project/__main__.py
---- ../../sherlock_project/__main__.py	2025-07-22 08:33:32.905901735 -0400
-+++ ../sherlock-project/__main__.py	2025-07-22 08:33:32.901901784 -0400
-@@ -18,5 +18,5 @@
+From: Joe <joe@rstrike.my.id>
+Subject: Testing patch to disable pipenv
+
+* sherlock_project/* disable import from sherlock_project
+Index: sherlock/sherlock_project/__main__.py
+===================================================================
+--- sherlock.orig/sherlock_project/__main__.py
++++ sherlock/sherlock_project/__main__.py
+@@ -18,5 +18,5 @@ if __name__ == "__main__":
          print(f"Sherlock requires Python 3.9+\nYou are using Python {python_version}, which is not supported by Sherlock.")
          sys.exit(1)
  
 -    from sherlock_project import sherlock
 +    import sherlock
      sherlock.main()
-diff -ruN ../../sherlock_project/notify.py ../sherlock-project/notify.py
---- ../../sherlock_project/notify.py	2025-07-22 08:33:32.905901735 -0400
-+++ ../sherlock-project/notify.py	2025-07-22 08:33:32.901901784 -0400
+Index: sherlock/sherlock_project/notify.py
+===================================================================
+--- sherlock.orig/sherlock_project/notify.py
++++ sherlock/sherlock_project/notify.py
 @@ -3,7 +3,7 @@
  This module defines the objects for notifying the caller about the
  results of queries.
@@ -20,10 +26,11 @@ diff -ruN ../../sherlock_project/notify.py ../sherlock-project/notify.py
  from colorama import Fore, Style
  import webbrowser
  
-diff -ruN ../../sherlock_project/sherlock.py ../sherlock-project/sherlock.py
---- ../../sherlock_project/sherlock.py	2025-07-22 08:33:32.909901685 -0400
-+++ ../sherlock-project/sherlock.py	2025-07-22 08:33:32.901901784 -0400
-@@ -6,16 +6,7 @@
+Index: sherlock/sherlock_project/sherlock.py
+===================================================================
+--- sherlock.orig/sherlock_project/sherlock.py
++++ sherlock/sherlock_project/sherlock.py
+@@ -6,16 +6,7 @@ Sherlock: Find Usernames Across Social N
  This module contains the main logic to search for usernames at social
  networks.
  """
@@ -40,7 +47,7 @@ diff -ruN ../../sherlock_project/sherlock.py ../sherlock-project/sherlock.py
  import csv
  import signal
  import pandas as pd
-@@ -29,18 +20,18 @@
+@@ -29,18 +20,18 @@ from typing import Optional
  import requests
  from requests_futures.sessions import FuturesSession
  
