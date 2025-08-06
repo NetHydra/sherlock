@@ -6,7 +6,16 @@ Sherlock: Find Usernames Across Social Networks Module
 This module contains the main logic to search for usernames at social
 networks.
 """
+
 import sys
+
+try:
+    from sherlock_project.__init__ import import_error_test_var # noqa: F401
+except ImportError:
+    print("Did you run Sherlock with `python3 sherlock/sherlock.py ...`?")
+    print("This is an outdated method. Please see https://sherlockproject.xyz/installation for up to date instructions.")
+    sys.exit(1)
+
 import csv
 import signal
 import pandas as pd
@@ -20,18 +29,18 @@ from typing import Optional
 import requests
 from requests_futures.sessions import FuturesSession
 
-from __init__ import (
+from sherlock_project.__init__ import (
     __longname__,
     __shortname__,
     __version__,
     forge_api_latest_release,
 )
 
-from result import QueryStatus
-from result import QueryResult
-from notify import QueryNotify
-from notify import QueryNotifyPrint
-from sites import SitesInformation
+from sherlock_project.result import QueryStatus
+from sherlock_project.result import QueryResult
+from sherlock_project.notify import QueryNotify
+from sherlock_project.notify import QueryNotifyPrint
+from sherlock_project.sites import SitesInformation
 from colorama import init
 from argparse import ArgumentTypeError
 
