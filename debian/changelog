@@ -1,3 +1,9 @@
+sherlock (0.15.1+hydrapwk6) yellowdog; urgency=medium
+
+  * Adding patch to use data.json from hydrapwk repository instead sherlock repositort
+
+ -- Joe <joe@rstrike.my.id>  Sun, 14 Sep 2025 07:26:00 +0700
+
 sherlock (0.15.1-hydrapwk5) RELEASED; urgency=medium
 
   * Resync sources
