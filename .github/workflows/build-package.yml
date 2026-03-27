@@ -1,4 +1,4 @@
-name: Build nethydra-wallpapers package
+name: Build sherlock package
 
 on:
   push:
