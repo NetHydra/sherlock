@@ -1,3 +1,9 @@
+sherlock (0.16.0+nethydra1) sana; urgency=medium
+
+  * Import sherlock 0.16.0
+
+ -- Joe <joe@rstrike.my.id>  Fri, 10 Apr 2026 21:26:00 +0700
+
 sherlock (0.15.1+hydrapwk6) yellowdog; urgency=medium
 
   * Adding patch to use data.json from hydrapwk repository instead sherlock repositort
